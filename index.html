@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IssI - Ropa Minimalista</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">issi</div>
+            <ul class="nav-menu">
+                <li><a href="cuenta.html">Mi Cuenta</a></li>
+                <li><a href="carrito.html" class="cart-link">Carrito</a></li>
+                <li class="cart-icon">🛒</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Mini-cart desplegable -->
+    <div class="mini-cart" id="mini-cart">
+        <div class="mini-cart-header">
+            <h3>Tu Carrito</h3>
+            <button class="close-mini-cart" id="close-mini-cart">&times;</button>
+        </div>
+        <div class="mini-cart-items">
+            <!-- Ítems se agregarán dinámicamente -->
+            <p>Tu carrito está vacío</p>
+        </div>
+        <div class="mini-cart-footer">
+            <p>Subtotal: $0</p>
+            <p>Envío gratis a partir de $800</p>
+            <a href="carrito.html" class="btn-primary">Ir al checkout</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero-title">
+            <h1>Simplicidad al Vestir</h1>
+        </section>
+
+        <section class="hero">
+        </section>
+
+        <section class="viste-easy">
+            <h2>Viste Easy</h2>
+            <div class="metrics-grid">
+                <div class="metric">
+                    <h2>100%</h2>
+                    <p>Algodón Premium</p>
+                </div>
+                <div class="metric">
+                    <h2>2</h2>
+                    <p>Colores Únicos</p>
+                </div>
+                <div class="metric">
+                    <h2>∞</h2>
+                    <p>Estilo Atemporal</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="collection-essential">
+            <h2>Colección Essential</h2>
+            <div class="products-grid">
+                <div class="product-item">
+                    <img src="css/img/black_t_shirt.png" alt="Playera Negra Essential">
+                    <h3>Playera Negra Essential</h3>
+                    <div class="product-footer">
+                        <p>$250</p>
+                        <button class="add-button">Agregar</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="css/img/white_t_shirt.png" alt="Playera Blanca Essential">
+                    <h3>Playera Blanca Essential</h3>
+                    <div class="product-footer">
+                        <p>$250</p>
+                        <button class="add-button">Agregar</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="css/img/black_shirt.png" alt="Playera Negra Manga">
+                    <h3>Playera Negra Manga</h3>
+                    <div class="product-footer">
+                        <p>$250</p>
+                        <button class="add-button">Agregar</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="css/img/white_shirt.png" alt="Playera Blanca Manga">
+                    <h3>Playera Blanca Manga</h3>
+                    <div class="product-footer">
+                        <p>$250</p>
+                        <button class="add-button">Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="collection-formal">
+            <h2>Colección Formal</h2>
+            <div class="products-grid">
+                <div class="product-item">
+                    <img src="css/img/black_sweater.png" alt="Camisa Negra">
+                    <h3>Camisa Negra</h3>
+                    <div class="product-footer">
+                        <p>$399</p>
+                        <button class="add-button">Agregar</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="css/img/white_sweater.png" alt="Camisa Blanca">
+                    <h3>Camisa Blanca</h3>
+                    <div class="product-footer">
+                        <p>$399</p>
+                        <button class="add-button">Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="quality-section">
+            <h2>Calidad de issi</h2>
+            <div class="quality-content">
+                <div class="quality-text">
+                    <h3>Calidad Sin Compromisos</h3>
+                    <p>En issi, cada prenda es una declaración de excelencia. Utilizamos materiales premium y procesos artesanales para garantizar que cada pieza no solo luzca bien, sino que dure.</p>
+                    <h4>Algodón Pima Premium</h4>
+                    <ul>
+                        <li>Algodón Pima 100% de la más alta calidad</li>
+                        <li>Suavidad excepcional y brillo natural</li>
+                        <li>Durabilidad superior que resiste el paso del tiempo</li>
+                    </ul>
+                    <h4>Corte Perfecto</h4>
+                    <ul>
+                        <li>Diseño ergonómico para máxima comodidad</li>
+                        <li>Corte láser de precisión para acabados impecables</li>
+                        <li>Costuras reforzadas para resistencia duradera</li>
+                    </ul>
+                </div>
+                <div class="quality-image">
+                    <img src="css/img/calidad.png" alt="Tela premium de algodón">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">issi</div>
+            <div class="footer-links">
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#privacidad">Privacidad</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 issi. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/carrito.js"></script>
+</body>
+</html>

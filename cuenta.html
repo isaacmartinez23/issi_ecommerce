@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta - IssI</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">issi</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="carrito.html" class="cart-link">Carrito</a></li>
+                <li class="cart-icon">🛒</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="account-container">
+        <aside class="account-sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#overview" class="nav-link active" data-section="overview">Overview</a></li>
+                    <li><a href="#pedidos" class="nav-link" data-section="pedidos">Pedidos</a></li>
+                    <li><a href="#devoluciones" class="nav-link" data-section="devoluciones">Devoluciones y cambios</a></li>
+                    <li><a href="#direcciones" class="nav-link" data-section="direcciones">Direcciones</a></li>
+                    <li><a href="#pagos" class="nav-link" data-section="pagos">Pagos</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="account-main">
+            <section id="overview" class="account-section active">
+                <h1>Overview</h1>
+                <div class="overview-content">
+                    <div class="user-info">
+                        <h2>Información del Usuario</h2>
+                        <p><strong>Nombre:</strong> [Nombre del Usuario]</p>
+                        <p><strong>Email:</strong> [email@ejemplo.com]</p>
+                    </div>
+                    <div class="stats">
+                        <h2>Estadísticas</h2>
+                        <div class="stat-item">
+                            <h3>Total de Pedidos</h3>
+                            <p>5</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Total Gastado</h3>
+                            <p>$1,250</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pedidos" class="account-section">
+                <h1>Pedidos</h1>
+                <div class="orders-list">
+                    <div class="order-item">
+                        <h3>Pedido #12345</h3>
+                        <p>Fecha: 2023-10-01</p>
+                        <p>Estado: Entregado</p>
+                        <p>Productos: Playera Negra Essential, Camisa Blanca</p>
+                        <p>Total: $499</p>
+                    </div>
+                    <!-- Más pedidos -->
+                </div>
+            </section>
+
+            <section id="devoluciones" class="account-section">
+                <h1>Devoluciones y Cambios</h1>
+                <div class="returns-form">
+                    <h2>Solicitar Devolución</h2>
+                    <form>
+                        <label for="order-id">ID del Pedido:</label>
+                        <input type="text" id="order-id" name="order-id">
+                        <label for="reason">Razón:</label>
+                        <select id="reason" name="reason">
+                            <option value="defecto">Producto defectuoso</option>
+                            <option value="cambio-talla">Cambio de talla</option>
+                            <option value="no-gusta">No me gusta</option>
+                        </select>
+                        <button type="submit">Enviar Solicitud</button>
+                    </form>
+                </div>
+                <div class="returns-history">
+                    <h2>Historial de Solicitudes</h2>
+                    <p>No hay solicitudes pendientes.</p>
+                </div>
+            </section>
+
+            <section id="direcciones" class="account-section">
+                <h1>Direcciones</h1>
+                <div class="addresses-list">
+                    <div class="address-item">
+                        <h3>Dirección Principal</h3>
+                        <p>Calle Ficticia 123, Ciudad, País</p>
+                        <button>Editar</button>
+                    </div>
+                </div>
+                <button class="add-button">Agregar Nueva Dirección</button>
+            </section>
+
+            <section id="pagos" class="account-section">
+                <h1>Pagos</h1>
+                <div class="payments-list">
+                    <div class="payment-item">
+                        <h3>Tarjeta **** **** **** 1234</h3>
+                        <p>Vencimiento: 12/25</p>
+                        <button>Editar</button>
+                    </div>
+                </div>
+                <button class="add-button">Agregar Nuevo Método de Pago</button>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('data-section');
+                showSection(sectionId);
+            });
+        });
+
+        function showSection(sectionId) {
+            document.querySelectorAll('.account-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+            document.querySelector(`[data-section="${sectionId}"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
