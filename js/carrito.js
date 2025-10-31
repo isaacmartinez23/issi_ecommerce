@@ -1,5 +1,19 @@
 // Carrito de compras - JavaScript
 document.addEventListener('DOMContentLoaded', function() {
+
+    // 1. Busca el botón por su nuevo ID
+    const botonCheckout = document.getElementById('btn-proceder-pago');
+
+    // 2. Asegúrate de que el botón exista en la página actual
+    if (botonCheckout) {
+        
+        // 3. Añade el "escuchador" de clics
+        botonCheckout.addEventListener('click', () => {
+            
+            // 4. Esta es la línea clave: Redirige al usuario
+            window.location.href = 'checkout.html';
+        });
+    }
     // Elementos del mini-cart
     const cartToggle = document.getElementById('cart-toggle');
     const miniCart = document.getElementById('mini-cart');
