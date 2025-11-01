@@ -1,31 +1,86 @@
-<main class="main">
-    <div class="checkout-container">
-        <h2>Información de Envío</h2>
-        
-        <form id="shipping-form" class="cuenta-form">
-            <div class="form-group">
-                <label for="calle">Calle</label>
-                <input type="text" id="calle" required>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - IssI</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">issi</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="carrito.html" class="cart-link">Carrito</a></li>
+                <li class="cart-icon">🛒</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="account-container">
+        <main class="main">
+            <div class="checkout-container">
+                <h2 class="checkout-title">Información de Envío</h2>
+                
+                <form id="shipping-form" class="checkout-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="calle">Calle y Número</label>
+                            <input type="text" id="calle" required placeholder="Ej: Av. Insurgentes Sur 123">
+                        </div>
+                        <div class="form-group">
+                            <label for="codigo_postal">Código Postal</label>
+                            <input type="text" id="codigo_postal" required pattern="[0-9]{5}" placeholder="Ej: 12345">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad</label>
+                            <input type="text" id="ciudad" required placeholder="Ej: Ciudad de México">
+                        </div>
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <input type="text" id="estado" required placeholder="Ej: CDMX">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pais">País</label>
+                        <input type="text" id="pais" required value="México" readonly>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" required placeholder="Ej: +52 55 1234 5678">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="referencias">Referencias de Entrega (Opcional)</label>
+                        <textarea id="referencias" rows="3" placeholder="Ej: Casa color azul, timbre 3B"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary checkout-btn">Guardar y Continuar al Pago</button>
+                    <p id="checkout-error" class="error-message"></p>
+                </form>
+
+                <div class="checkout-summary">
+                    <h3>Resumen del Pedido</h3>
+                    <div class="summary-items">
+                        <!-- Los items del carrito se cargarán aquí dinámicamente -->
+                    </div>
+                    <div class="summary-total">
+                        <span>Total: $<span id="checkout-total">0.00</span></span>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="codigo_postal">Código Postal</label>
-                <input type="text" id="codigo_postal" required>
-            </div>
-            <div class="form-group">
-                <label for="ciudad">Ciudad</label>
-                <input type="text" id="ciudad" required>
-            </div>
-            <div class="form-group">
-                <label for="estado">Estado</label>
-                <input type="text" id="estado" required>
-            </div>
-            <div class="form-group">
-                <label for="pais">País</label>
-                <input type="text" id="pais" required>
-            </div>
-            
-            <button type="submit" class="btn-primary">Guardar y Continuar al Pago</button>
-            <p id="checkout-error" class="error-message"></p>
-        </form>
+        </main>
     </div>
-</main>
+
+    <script src="js/checkout.js"></script>
+</body>
+</html>

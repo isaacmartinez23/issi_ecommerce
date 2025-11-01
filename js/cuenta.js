@@ -3,7 +3,13 @@
 import { supabase } from './supabaseClient.js'; 
 
 document.addEventListener('DOMContentLoaded', () => {
-    // ... (aquí van tus selectores de formularios: loginForm, registerForm, etc.) ...
+    // Selectores de elementos
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+    const accountSidebar = document.querySelector('.account-sidebar');
+    const authContainer = document.getElementById('auth-container');
+    const accountDashboard = document.getElementById('account-dashboard');
+    const logoutButton = document.getElementById('logout-button');
 
     // --- MANEJO DEL REGISTRO ---
     registerForm.addEventListener('submit', async (e) => {
@@ -50,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // ¡ÉXITO! Supabase maneja la sesión automáticamente
             // data.session y data.user tienen toda la info
             authContainer.style.display = 'none';
+            accountSidebar.style.display = 'block'; // Mostramos la barra lateral
             accountDashboard.style.display = 'block';
 
         } catch (err) {
@@ -61,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     logoutButton.addEventListener('click', async () => {
         await supabase.auth.signOut();
         authContainer.style.display = 'block';
+        accountSidebar.style.display = 'none'; // Ocultamos la barra lateral
         accountDashboard.style.display = 'none';
     });
 

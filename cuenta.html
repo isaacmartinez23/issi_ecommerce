@@ -22,7 +22,7 @@
     </header>
 
     <div class="account-container">
-        <aside class="account-sidebar">
+        <aside class="account-sidebar" style="display:none;">
             <nav class="sidebar-nav">
                 <ul>
                     <li><a href="#overview" class="nav-link active" data-section="overview">Overview</a></li>
@@ -35,52 +35,50 @@
         </aside>
 
         <main class="main">
-    
-    <div id="auth-container" class="cuenta-container">
-        
-        <form id="login-form" class="cuenta-form">
-            <h2>Iniciar Sesión</h2>
-            <div class="form-group">
-                <label for="login-email">Email</label>
-                <input type="email" id="login-email" required>
-            </div>
-            <div class="form-group">
-                <label for="login-password">Contraseña</label>
-                <input type="password" id="login-password" required>
-            </div>
-            <button type="submit" class="btn-primary">Entrar</button>
-            <p id="login-error" class="error-message"></p>
-            <p>¿Nuevo en issi? <a href="#" id="show-register">Crea una cuenta</a></p>
-        </form>
+            <div id="auth-container" class="cuenta-container">
+                
+                <form id="login-form" class="cuenta-form">
+                    <h2>Iniciar Sesión</h2>
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Contraseña</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Entrar</button>
+                    <p id="login-error" class="error-message"></p>
+                    <p>¿Nuevo en issi? <a href="#" id="show-register">Crea una cuenta</a></p>
+                </form>
 
-        <form id="register-form" class="cuenta-form" style="display:none;">
-            <h2>Crear Cuenta</h2>
-            <div class="form-group">
-                <label for="register-email">Email</label>
-                <input type="email" id="register-email" required>
+                <form id="register-form" class="cuenta-form" style="display:none;">
+                    <h2>Crear Cuenta</h2>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Contraseña</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Registrarse</button>
+                    <p id="register-error" class="error-message"></p>
+                    <p>¿Ya tienes cuenta? <a href="#" id="show-login">Inicia sesión</a></p>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="register-password">Contraseña</label>
-                <input type="password" id="register-password" required>
+
+            <div id="account-dashboard" class="cuenta-container" style="display:none;">
+                <h1 class="cuenta-title">Mi Cuenta</h1>
+                
+                <div class="cuenta-info">
+                    <h3>Historial de Pedidos</h3>
+                    <p>Aquí verás tus pedidos.</p>
+                    
+                    <button id="logout-button" class="btn-secondary">Cerrar Sesión</button>
+                </div>
             </div>
-            <button type="submit" class="btn-primary">Registrarse</button>
-            <p id="register-error" class="error-message"></p>
-            <p>¿Ya tienes cuenta? <a href="#" id="show-login">Inicia sesión</a></p>
-        </form>
-    </div>
-
-    <div id="account-dashboard" class="cuenta-container" style="display:none;">
-        <h1 class="cuenta-title">Mi Cuenta</h1>
-        
-        <div class="cuenta-info">
-            <h3>Historial de Pedidos</h3>
-            <p>Aquí verás tus pedidos.</p>
-            
-            <button id="logout-button" class="btn-secondary">Cerrar Sesión</button>
-        </div>
-    </div>
-
-</main>
+        </main>
     </div>
 
     <script>

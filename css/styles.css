@@ -440,6 +440,127 @@ body {
     background-color: var(--background-color);
 }
 
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    padding-top: 100px; /* Espacio para el header fijo */
+}
+
+/* Estilos para el contenedor de autenticación */
+.cuenta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+}
+
+/* Estilos para los formularios de login y registro */
+.cuenta-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cuenta-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #F0F0F0;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.error-message {
+    color: var(--error-color);
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.cuenta-form p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.cuenta-form a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cuenta-form a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos específicos para el dashboard de cuenta */
+.cuenta-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-title);
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.cuenta-info {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    border: 1px solid #F0F0F0;
+}
+
+.cuenta-info h3 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-title);
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.cuenta-info p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--hover-tint);
+}
+
+/* Estilos para sidebar de cuenta */
 .account-sidebar {
     width: 250px;
     background-color: var(--secondary-color);
@@ -980,5 +1101,221 @@ body {
 
     .cross-sell-items {
         flex-direction: column;
+    }
+}
+
+/* Estilos para checkout.html */
+.checkout-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-top: 120px;
+    width: 100%;
+}
+
+.checkout-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-title);
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.checkout-form {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #F0F0F0;
+}
+
+.checkout-form h2 {
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #F0F0F0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.checkout-summary {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #F0F0F0;
+    height: fit-content;
+    position: sticky;
+    top: 120px;
+}
+
+.checkout-summary h3 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-title);
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.summary-items {
+    margin-bottom: 2rem;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 1rem;
+}
+
+.summary-item-details {
+    flex: 1;
+}
+
+.summary-item-details h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+}
+
+.summary-item-details p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.summary-item-price {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.summary-total {
+    border-top: 2px solid var(--primary-color);
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.summary-total span {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-title);
+    color: var(--primary-color);
+}
+
+/* Responsive para checkout */
+@media (max-width: 1024px) {
+    .checkout-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.5rem;
+        padding-top: 100px;
+    }
+
+    .checkout-summary {
+        position: static;
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .checkout-container {
+        padding: 1rem;
+        padding-top: 80px;
+    }
+
+    .checkout-title {
+        font-size: 2rem;
+    }
+
+    .checkout-form {
+        padding: 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .checkout-summary {
+        padding: 1.5rem;
+    }
+
+    .summary-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .summary-item img {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .checkout-container {
+        padding: 2rem;
+        padding-top: 100px;
     }
 }
